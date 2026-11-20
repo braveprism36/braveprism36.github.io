@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244d41">
+  <meta name="description" content="A world of memories, a plan for you. Compare Earth Collection Free and Premium, from US$15 per month.">
+  <title>Free & Premium · Earth Collection</title>
+  
+  <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root{color-scheme:light;--ink:#203d36;--muted:#69776f;--paper:#f8f8f2;--green:#244d41;--line:#dce2d8;--mint:#eef5ee;--gold:#efd7a3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.6 'DM Sans',Arial,'PingFang SC',sans-serif}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #dc946d;outline-offset:5px}
+.icon-definitions{position:absolute;width:0;height:0;overflow:hidden}
+.icon{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.site-header{min-height:94px;padding:20px 5%;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font:800 19px/1.2 'Manrope',Arial,sans-serif;letter-spacing:-.7px;white-space:nowrap}
+.brand-mark{width:39px;height:39px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.brand small{display:block;font:500 8px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:1.1px;margin-top:5px}
+.header-actions{display:flex;align-items:center;gap:28px;font-size:.875rem}
+.back-link{border-bottom:1px solid #a8b7ab}
+.language-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:8px 12px;white-space:nowrap;font-size:.875rem}
+.intro{max-width:900px;margin:0 auto;padding:58px 24px 35px;text-align:center}
+.eyebrow{margin:0;font-size:.75rem;letter-spacing:2px;font-weight:600;color:#70836f}
+.intro h1{font:400 clamp(38px,4.1vw,58px)/1.12 'Cormorant Garamond',Georgia,serif;letter-spacing:-1.6px;margin:17px 0}
+.intro h1 em{font-weight:400;color:#83957c}
+.intro-copy{margin:0;font-size:1rem;color:var(--muted)}
+.plans{display:grid;grid-template-columns:1fr 1fr;max-width:1000px;margin:0 auto;padding:0 24px;align-items:stretch;gap:0}
+.plan{border:1px solid #d4ddd2;min-width:0;border-radius:12px;overflow:hidden}
+.free-plan{background:#fff;margin-top:38px;border-radius:12px 0 0 12px;border-right:0}
+.premium-plan{border:1.5px solid var(--green);background:var(--mint);box-shadow:0 16px 50px #244d4109;border-radius:12px 12px 12px 0}
+.recommendation{min-height:38px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;font-size:.875rem;font-weight:600;padding:7px 16px}
+.recommendation .icon{width:17px;height:17px;color:var(--gold)}
+.plan-content{padding:30px 38px 26px}
+.plan-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.plan-kicker{font-size:.75rem;letter-spacing:1.6px;font-weight:600;color:#738270}
+.plan-icon{width:26px;height:26px;color:#8b9d87}
+.premium-plan .plan-icon{color:#5c7861}
+.plan h2{font:700 2.625rem/1.2 'Manrope',Arial,sans-serif;letter-spacing:-1.8px;margin:0 0 12px}
+.plan h2>span{font:400 .875rem/1.4 'DM Sans',Arial,sans-serif;letter-spacing:0;color:#71806e}
+.plan-description{margin:0 0 24px;font-size:1rem;min-height:26px;color:#5e6e64}
+.price{display:flex;align-items:baseline;gap:4px;min-height:65px;line-height:1.1}
+.currency{font-size:1.125rem;font-weight:600}
+.price strong{font:600 3.625rem/1.1 'Manrope',Arial,sans-serif;letter-spacing:-2.6px}
+.period{margin-left:7px;font-size:1rem;color:#6d7a70}
+.billing-note{font-size:.875rem;color:#6d7a70;margin:8px 0 24px}
+.plan-button{width:100%;min-height:49px;display:flex;justify-content:center;align-items:center;gap:9px;border:1px solid var(--green);border-radius:6px;font-size:1rem;font-weight:600;text-align:center;text-decoration:none;padding:12px 15px;transition:background .18s,box-shadow .18s}
+.current-plan{background:transparent;border-color:#cdd8cb;color:#7b8d78;cursor:default}
+.upgrade-button{background:var(--green);color:#fff;box-shadow:0 3px 0 #17372d0c}
+.upgrade-button:hover{background:#183c31;box-shadow:0 5px 16px #244d4120}
+.upgrade-button .icon{width:19px;height:19px;color:var(--gold)}
+.features-heading{font-size:1rem;line-height:1.5;font-weight:600;margin:26px 0 18px}
+.preview-label{margin:-10px 0 18px;font-size:.75rem;letter-spacing:1px;color:#718570}
+.features{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:19px}
+.features li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;line-height:1.5}
+.features .icon{width:22px;height:22px;margin-top:1px;color:#667c65}
+.premium-plan .features .icon{color:var(--green)}
+.plan-footnote{font-size:.8125rem;color:#72806e;margin:27px 0 0;line-height:1.6}
+.questions{max-width:760px;padding:54px 24px 62px;margin:auto}
+.questions h2{font:400 2rem/1.2 'Cormorant Garamond',Georgia,serif;letter-spacing:-.4px;text-align:center;margin:0 0 24px}
+details{border-bottom:1px solid var(--line)}
+summary{font-size:1rem;font-weight:500;cursor:pointer;list-style:none;padding:18px 28px 18px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:2px;top:14px;font-size:1.5rem;color:#829079;font-weight:400}
+details[open] summary::after{content:'−'}
+details p{font-size:.9375rem;line-height:1.8;color:var(--muted);margin:0;padding:0 28px 20px 0}
+.site-footer{border-top:1px solid var(--line);padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:.875rem;color:var(--muted)}
+.site-footer>span{font-family:'Manrope',Arial,sans-serif;font-weight:800;color:var(--ink);letter-spacing:-.5px}
+.site-footer p{margin:0}
+.site-footer a{text-decoration:underline;text-underline-offset:4px}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink);padding:0;width:calc(100% - 40px);max-width:450px;max-height:calc(100dvh - 40px);overflow:auto;box-shadow:0 30px 100px #0c211b44}
+dialog::backdrop{background:#172f2aaa;backdrop-filter:blur(6px)}
+.upgrade-dialog-content{position:relative;padding:36px 32px 26px;text-align:center}
+.close-button{position:absolute;top:10px;right:12px;display:grid;place-items:center;width:36px;height:36px;font-size:1.75rem;line-height:1;border:0;border-radius:50%;background:transparent;color:#738270}
+.close-button:hover{background:#e8ece1}
+.dialog-emblem{width:64px;height:64px;border:1px solid #d8dfce;border-radius:50%;background:#eaf0e3;margin:4px auto 23px;display:grid;place-items:center}
+.dialog-emblem .icon{width:32px;height:32px}
+dialog .eyebrow{font-size:.6875rem;letter-spacing:1.4px}
+dialog h2{font:400 2.375rem/1.1 'Cormorant Garamond',Georgia,serif;margin:15px 0}
+.dialog-price{font:600 2rem/1.4 'Manrope',Arial,sans-serif}
+.dialog-price span{font:400 1rem/1.5 'DM Sans',Arial,sans-serif;color:var(--muted)}
+dialog p:not(.eyebrow){font-size:1rem;line-height:1.8;color:var(--muted);margin:16px 0 24px}
+.dialog-back{font-size:.875rem;background:none;border:0;padding:16px 18px 0;color:#697b65;min-height:44px}
+html:lang(zh-CN) .intro h1{font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-size:clamp(28px,3.2vw,43px);line-height:1.5;font-weight:400;letter-spacing:0}
+html:lang(zh-CN) .questions h2,html:lang(zh-CN) dialog h2{font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-size:1.65rem;line-height:1.5}
+@media(min-width:1500px){.site-header,.site-footer{padding-left:calc((100% - 1350px)/2);padding-right:calc((100% - 1350px)/2)}}
+@media(max-width:850px){.plan-content{padding:27px 25px}.plan h2{font-size:2.25rem}.plan-description{min-height:52px}.header-actions{gap:20px}.plans{padding:0 20px}.features li{font-size:.9375rem}.plan-kicker{font-size:.6875rem;letter-spacing:1px}}
+@media(max-width:640px){.site-header{min-height:78px;padding:18px 20px;gap:12px}.brand{font-size:15px;gap:7px}.brand-mark{width:31px;height:31px}.brand-mark .icon{width:22px;height:22px}.brand small{font-size:6px;letter-spacing:.65px}.header-actions{gap:0}.back-link{display:none}.language-button{padding:7px 9px;font-size:.75rem}.intro{padding:39px 23px 29px}.eyebrow{font-size:.625rem;letter-spacing:1.5px}.intro h1{font-size:42px;line-height:1.06;letter-spacing:-.8px;margin:16px 0}.intro h1 span,.intro h1 em{display:block}.intro-copy{font-size:.9375rem;line-height:1.7;max-width:300px;margin:auto}.plans{grid-template-columns:1fr;gap:21px;padding:0 20px;max-width:470px}.free-plan{margin-top:0;border-radius:11px;border-right:1px solid #d4ddd2}.premium-plan{border-radius:11px}.recommendation{min-height:38px;font-size:.8125rem}.plan-content{padding:25px 26px 27px}.plan-description{min-height:0;margin-bottom:21px;font-size:.9375rem}.plan h2{font-size:2.375rem}.plan-kicker{font-size:.6875rem;letter-spacing:1.3px}.price strong{font-size:3.25rem}.price{min-height:58px}.billing-note{margin-bottom:22px;font-size:.8125rem}.features{gap:17px}.features li{font-size:.9375rem}.features-heading{margin-top:23px}.plan-footnote{margin-top:23px}.questions{padding:40px 24px 45px;max-width:470px}.questions h2{font-size:1.75rem}.questions summary{font-size:.9375rem}.site-footer{padding:22px 24px;gap:10px;flex-wrap:wrap;font-size:.8125rem}.site-footer p{width:100%;order:3}.upgrade-dialog-content{padding:32px 24px 23px}dialog h2{font-size:2.1rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+</style>
+  
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 5-5 13 0 18 5-5 5-13 0-18Z"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.7 2.7L16 9.4"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z"/><path d="M20 2v4m-2-2h4"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Earth Collection home">
+      <span class="brand-mark"><svg class="icon"><use href="#icon-globe"/></svg></span>
+      <span>earth collection<small data-i18n="tagline">THE WORLD, THROUGH EACH OTHER</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="back-link" data-back data-i18n="back" href="/">Back to exploring</a>
+      <button class="language-button" id="languageButton" type="button" aria-label="Switch to Chinese">EN / 中文</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="pageTitle">
+      <p class="eyebrow" data-i18n="eyebrow">A WORLD OF MEMORIES. A PLAN FOR YOU.</p>
+      <h1 id="pageTitle"><span data-i18n="headline">Your world.</span> <em data-i18n="headlineAccent">More possibilities.</em></h1>
+      <p class="intro-copy" data-i18n="intro">Start your collection for free. Discover what’s next with Premium.</p>
+    </section>
+
+    <section class="plans" aria-label="Free and Premium plans" data-label="plansLabel">
+      <article class="plan free-plan" aria-labelledby="freeTitle">
+        <div class="plan-content">
+          <div class="plan-heading"><span class="plan-kicker" data-i18n="freeKicker">FOR EVERY EXPLORER</span><svg class="plan-icon icon" aria-hidden="true"><use href="#icon-globe"/></svg></div>
+          <h2 id="freeTitle">Free <span data-i18n="version">version</span></h2>
+          <p class="plan-description" data-i18n="freeDescription">A little place for your big adventures.</p>
+          <div class="price"><span class="currency">US$</span><strong>0</strong><span class="period" data-i18n="perMonth">/ month</span></div>
+          <p class="billing-note" data-i18n="freeBilling">Free to explore. Free to start collecting.</p>
+          <button class="plan-button current-plan" type="button" disabled data-i18n="currentPlan">Current plan</button>
+          <h3 class="features-heading" data-i18n="freeIncludes">Your world starts here:</h3>
+          <ul class="features">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="free1">Your own interactive 3D globe</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="free2">Photo memories, places & personal notes</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="free3">Travel routes, diaries & memory calendars</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="free4">Discover & save community journeys</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="free5">Export & restore your personal backups</span></li>
+          </ul>
+          <p class="plan-footnote" data-i18n="freeFootnote">A meaningful collection starts with one memory.</p>
+        </div>
+      </article>
+
+      <article class="plan premium-plan" aria-labelledby="premiumTitle">
+        <div class="recommendation"><svg class="icon" aria-hidden="true"><use href="#icon-sparkle"/></svg><span data-i18n="recommendation">For a world you want to keep</span></div>
+        <div class="plan-content">
+          <div class="plan-heading"><span class="plan-kicker" data-i18n="premiumKicker">FOR YOUR NEXT CHAPTER</span><svg class="plan-icon icon" aria-hidden="true"><use href="#icon-sparkle"/></svg></div>
+          <h2 id="premiumTitle">Premium <span data-i18n="version">version</span></h2>
+          <p class="plan-description" data-i18n="premiumDescription">Make every journey a little more yours.</p>
+          <div class="price"><span class="currency">US$</span><strong>15</strong><span class="period" data-i18n="perMonth">/ month</span></div>
+          <p class="billing-note" data-i18n="premiumBilling">Monthly plan · Priced in US dollars</p>
+          <button class="plan-button upgrade-button" id="upgradeButton" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-sparkle"/></svg><span data-i18n="upgrade">Upgrade to Premium</span></button>
+          <h3 class="features-heading" data-i18n="premiumIncludes">Everything in Free, plus:</h3>
+          <p class="preview-label" data-i18n="plannedFeatures">PLANNED PREMIUM FEATURES</p>
+          <ul class="features">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium1">A full-resolution cloud photo archive</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium2">Exclusive travel journal & scrapbook themes</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium3">HD videos of your travel routes</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium4">Personalised travel insights & year recaps</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium5">Print-ready memory books</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="premium6">Priority customer support</span></li>
+          </ul>
+          <p class="plan-footnote" data-i18n="premiumFootnote">Coming soon. No payment is taken in this preview.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="questions" aria-labelledby="questionsTitle">
+      <h2 id="questionsTitle" data-i18n="questionsTitle">A few things you might wonder.</h2>
+      <details><summary data-i18n="question1">Can I keep using the Free version?</summary><p data-i18n="answer1">Absolutely. Your current features and memories stay available. This Premium preview does not place any new limits on your collection.</p></details>
+      <details><summary data-i18n="question2">Can I subscribe to Premium now?</summary><p data-i18n="answer2">Premium is planned at US$15 per month. Subscriptions and payments are not open yet. The upgrade button lets you review the plan, and you will not be charged.</p></details>
+      <details><summary data-i18n="question3">Will my memories be shared publicly?</summary><p data-i18n="answer3">Your private memories are never published automatically. You choose which journeys to share with the community.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>earth collection</span><p data-i18n="footer">A shared world. A million ways to see it.</p><a data-back href="/" data-i18n="keepExploring">Keep exploring</a></footer>
+
+  <dialog id="upgradeDialog" aria-labelledby="upgradeTitle" aria-describedby="upgradeDescription">
+    <div class="upgrade-dialog-content">
+      <button class="close-button" id="closeDialog" type="button" aria-label="Close" data-label="close">×</button>
+      <div class="dialog-emblem"><svg class="icon" aria-hidden="true"><use href="#icon-sparkle"/></svg></div>
+      <p class="eyebrow" data-i18n="dialogEyebrow">EARTH COLLECTION PREMIUM</p>
+      <h2 id="upgradeTitle" data-i18n="dialogTitle">Your next chapter is coming.</h2>
+      <div class="dialog-price">US$15 <span data-i18n="perMonth">/ month</span></div>
+      <p id="upgradeDescription" data-i18n="dialogDescription">We’re preparing Premium for your future adventures. Subscriptions aren’t live yet, so you won’t be charged.</p>
+      <a class="plan-button upgrade-button" href="/memory.html" id="exploreMemories" data-i18n="exploreMemories">Explore my memories</a>
+      <button class="dialog-back" id="backToPlans" type="button" data-i18n="backToPlans">Back to plans</button>
+    </div>
+  </dialog>
+<script>(() => {
+  'use strict';
+
+  const copy = {
+    en: {
+      title: 'Free & Premium · Earth Collection', tagline: 'THE WORLD, THROUGH EACH OTHER',
+      back: 'Back to exploring', eyebrow: 'A WORLD OF MEMORIES. A PLAN FOR YOU.',
+      headline: 'Your world.', headlineAccent: 'More possibilities.',
+      intro: 'Start your collection for free. Discover what’s next with Premium.',
+      plansLabel: 'Free and Premium plans', freeKicker: 'FOR EVERY EXPLORER', version: 'version',
+      freeDescription: 'A little place for your big adventures.', perMonth: '/ month',
+      freeBilling: 'Free to explore. Free to start collecting.', currentPlan: 'Current plan',
+      freeIncludes: 'Your world starts here:', free1: 'Your own interactive 3D globe',
+      free2: 'Photo memories, places & personal notes', free3: 'Travel routes, diaries & memory calendars',
+      free4: 'Discover & save community journeys', free5: 'Export & restore your personal backups',
+      freeFootnote: 'A meaningful collection starts with one memory.',
+      recommendation: 'For a world you want to keep', premiumKicker: 'FOR YOUR NEXT CHAPTER',
+      premiumDescription: 'Make every journey a little more yours.',
+      premiumBilling: 'Monthly plan · Priced in US dollars', upgrade: 'Upgrade to Premium',
+      premiumIncludes: 'Everything in Free, plus:', plannedFeatures: 'PLANNED PREMIUM FEATURES',
+      premium1: 'A full-resolution cloud photo archive', premium2: 'Exclusive travel journal & scrapbook themes',
+      premium3: 'HD videos of your travel routes', premium4: 'Personalised travel insights & year recaps',
+      premium5: 'Print-ready memory books', premium6: 'Priority customer support',
+      premiumFootnote: 'Coming soon. No payment is taken in this preview.',
+      questionsTitle: 'A few things you might wonder.', question1: 'Can I keep using the Free version?',
+      answer1: 'Absolutely. Your current features and memories stay available. This Premium preview does not place any new limits on your collection.',
+      question2: 'Can I subscribe to Premium now?',
+      answer2: 'Premium is planned at US$15 per month. Subscriptions and payments are not open yet. The upgrade button lets you review the plan, and you will not be charged.',
+      question3: 'Will my memories be shared publicly?',
+      answer3: 'Your private memories are never published automatically. You choose which journeys to share with the community.',
+      footer: 'A shared world. A million ways to see it.', keepExploring: 'Keep exploring',
+      close: 'Close', dialogEyebrow: 'EARTH COLLECTION PREMIUM', dialogTitle: 'Your next chapter is coming.',
+      dialogDescription: 'We’re preparing Premium for your future adventures. Subscriptions aren’t live yet, so you won’t be charged.',
+      exploreMemories: 'Explore my memories', backToPlans: 'Back to plans'
+    },
+    zh: {
+      title: 'Free 与 Premium · 地球收藏夹', tagline: '地球收藏夹 · 看见彼此的世界',
+      back: '返回探索', eyebrow: '收藏整个世界，选择你的方式',
+      headline: '你的世界，', headlineAccent: '更多可能。',
+      intro: '免费开启你的收藏，和 Premium 一起期待下一段旅程。',
+      plansLabel: '免费版与 Premium 套餐', freeKicker: '每一位探索者的起点', version: '版本',
+      freeDescription: '为你的大冒险，留一个小小的位置。', perMonth: '/ 月',
+      freeBilling: '免费探索，免费开始收藏。', currentPlan: '当前套餐',
+      freeIncludes: '从这里，开始收藏你的世界：', free1: '属于你的互动 3D 地球',
+      free2: '照片回忆、地点与个人笔记', free3: '旅行路线、日记与回忆日历',
+      free4: '探索与收藏社区旅程', free5: '导出备份与恢复个人收藏',
+      freeFootnote: '一份有意义的收藏，从一个瞬间开始。',
+      recommendation: '让值得珍藏的世界，留得更久', premiumKicker: '为你的下一段旅程',
+      premiumDescription: '让每一段旅程，多一点你的样子。',
+      premiumBilling: '按月订阅 · 以美元计价', upgrade: '升级至 Premium',
+      premiumIncludes: '包含 Free 全部功能，以及：', plannedFeatures: 'PREMIUM 规划中的功能',
+      premium1: '原画质云端照片档案', premium2: '专属旅行日志与手帐主题',
+      premium3: '高清旅行路线视频', premium4: '个性化旅行洞察与年度回顾',
+      premium5: '可供印刷的旅行回忆相册', premium6: '优先客户支持',
+      premiumFootnote: '即将推出。本预览不会收取任何费用。',
+      questionsTitle: '你可能想知道', question1: '我可以继续使用免费版吗？',
+      answer1: '当然可以。你目前的功能与回忆都可以继续使用。本次 Premium 预览不会为现有收藏增加任何限制。',
+      question2: '现在可以订阅 Premium 吗？',
+      answer2: 'Premium 计划定价为每月 US$15。目前尚未开放订阅与支付。点击升级按钮可以查看套餐说明，不会产生扣款。',
+      question3: '我的私人回忆会被公开吗？',
+      answer3: '私人回忆不会自动公开。你可以自行决定将哪些旅程分享到社区。',
+      footer: '同一个世界，千万种看法。', keepExploring: '继续探索',
+      close: '关闭', dialogEyebrow: '地球收藏夹 PREMIUM', dialogTitle: '下一段精彩，即将开启。',
+      dialogDescription: '我们正在为你未来的冒险准备 Premium。目前尚未开放订阅，因此不会收取任何费用。',
+      exploreMemories: '探索我的回忆', backToPlans: '返回套餐对比'
+    }
+  };
+
+  let language = 'en';
+  try { if (localStorage.getItem('earth-community-language') === 'zh') language = 'zh'; } catch {}
+  const params = new URLSearchParams(location.search);
+  const returnPath = params.get('from') === 'memories' ? '/memory.html' : '/';
+  document.querySelectorAll('[data-back]').forEach(link => { link.href = returnPath; });
+
+  function renderLanguage() {
+    const strings = copy[language];
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.title = strings.title;
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      element.textContent = strings[element.dataset.i18n];
+    });
+    document.querySelectorAll('[data-label]').forEach(element => {
+      element.setAttribute('aria-label', strings[element.dataset.label]);
+    });
+    const toggle = document.getElementById('languageButton');
+    toggle.textContent = language === 'en' ? 'EN / 中文' : '中文 / EN';
+    toggle.setAttribute('aria-label', language === 'en' ? 'Switch to Chinese' : 'Switch to English');
+  }
+
+  document.getElementById('languageButton').addEventListener('click', () => {
+    language = language === 'en' ? 'zh' : 'en';
+    try { localStorage.setItem('earth-community-language', language); } catch {}
+    renderLanguage();
+  });
+
+  const dialog = document.getElementById('upgradeDialog');
+  const upgrade = document.getElementById('upgradeButton');
+  upgrade.addEventListener('click', () => { dialog.showModal(); });
+  document.getElementById('closeDialog').addEventListener('click', () => { dialog.close(); });
+  document.getElementById('backToPlans').addEventListener('click', () => { dialog.close(); });
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => { upgrade.focus(); });
+  renderLanguage();
+})();
+</script></body>
+</html>
